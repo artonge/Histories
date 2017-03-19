@@ -1,0 +1,8 @@
+#stories-view
+  .content Hello {{message}}
+
+  #stories
+    router-link.nav-link.story(
+      v-for="story of stories" v-bind:key="story.id"
+      v-bind:to="{ name: 'story', params: { storyID: story.ID }}"
+    ) {{story.name}}

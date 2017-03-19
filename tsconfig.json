@@ -6,7 +6,7 @@
 		"noImplicitAny": true,
 		"removeComments": true,
 		"preserveConstEnums": true,
-		"types" : ["node", "impress", "vue", "vue-router"]
+		"types" : ["node", "vue", "vue-router"]
 	},
 	"include": [
 		"src/**/*.ts"

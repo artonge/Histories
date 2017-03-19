@@ -1,0 +1,27 @@
+doctype html
+html(lang="en" ng-app)
+	head
+		meta(charset="utf-8")
+		meta(name="viewport" content="width=device-width, initial-scale=1")
+
+		title Histories
+
+	body
+		// MAIN CONTAINER
+		.main-container#app
+
+			// Need .alert class to be displayed
+			.alert-app-level
+
+			// HEADER
+			header.header.header-1
+				.branding
+					router-link.nav-link(to="/home")
+						clr-icon(shape="home")
+						span.title Histories
+				.header-nav
+					router-link.nav-link(to="/stories")
+						span.nav-text Stories
+
+			// APP CONTENT
+			router-view#app-content

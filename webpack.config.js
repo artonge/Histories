@@ -4,18 +4,17 @@ var HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
 	context: __dirname + "/src",
-	entry: { app : "./ts/main.ts" },
+	entry: { app : "./App/main.ts" },
 	resolve: {
 		extensions: [".js", ".ts"],
 		alias: {
 			'vue$': 'vue/dist/vue.common.js',
-			Templates: __dirname + '/src/templates/',
-			Styles: __dirname + '/src/styles/',
 		}
 	},
 	output: {
 		path: __dirname + '/dist',
-		filename: '[name].js'
+		filename: '[name].js',
+		publicPath: '/'
 	},
 	module: {
 		rules: [
@@ -29,13 +28,12 @@ module.exports = {
 		noParse: [/clarity-icons.min.js/],
 	},
 	plugins: [
-		new HtmlWebpackPlugin({ template: './templates/index.pug' })
+		new HtmlWebpackPlugin({ template: './App/index.pug' })
 	],
 	devtool: 'source-map',
 	devServer: {
-		contentBase: __dirname + '/dist',
+		contentBase: [__dirname + '/dist', __dirname, "ressources"],
 		watchContentBase: true,
-		historyApiFallback: true,
 		stats: 'minimal',
 		inline: true,
 	},
