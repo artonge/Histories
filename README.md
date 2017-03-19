@@ -1,3 +1,18 @@
+# TODO
+[x] Bootstrap the project with Vuejs, Typescript, and Webpack
+[x] Add basic story display
+[x] Add Arthur's story
+[ ] Update style of the home view
+[ ] Update style of the stories view
+[ ] Add more stories
+[ ] Add more option to story display
+  [ ] Add points count
+  [ ] Find the correct traduction to a sentence
+  [ ] Add find orthographique mistakes
+  [ ] Complete the sentence by chossing between propositions
+  [ ] Add step in url
+  [ ] Save step in localstorage
+
 # Install
 - Install [node](https://nodejs.org/en/download) and [yarn](https://yarnpkg.com/lang/en/docs/install)
 - `git clone git@github.com:artonge/Histories.git`
