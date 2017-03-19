@@ -1,7 +1,6 @@
 {
-	"ID": 1,
+	"ID": "arthur",
 	"name": "The Legend of Arhur",
-	"path": "arthur",
 	"steps": [
 		{
 			"image": "1-1.png",

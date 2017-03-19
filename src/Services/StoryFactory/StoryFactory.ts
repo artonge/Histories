@@ -10,6 +10,7 @@ class StoryFactory {
   public all: [Story]
 
   constructor(list: [Story]) {
+    console.info('Create StoryFactory')
     this.all = list
   }
 

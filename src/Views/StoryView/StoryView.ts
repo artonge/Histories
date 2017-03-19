@@ -15,12 +15,9 @@ export default Vue.extend({
 
 	data() {
 		return {
+			story: StoryFactory.get(this.$route.params.storyID),
 			currentStep: 0
 		}
-	},
-
-	computed: {
-		story: function() { return StoryFactory.get(this.$route.params.storyID) }
 	},
 
 	methods: {
