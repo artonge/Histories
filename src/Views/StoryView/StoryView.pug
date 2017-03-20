@@ -3,5 +3,5 @@
     story-step(
       v-for="(step, index) of story.steps" v-bind:key="story.id"
       v-show="index == currentStep"
-      v-bind:text='step.text' v-bind:image='step.image'
+      v-bind:config='step'
     )

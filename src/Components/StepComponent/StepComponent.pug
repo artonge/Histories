@@ -1,3 +1,3 @@
 .step-content
   img.step-image(v-bind:src="imagePath")
-  .step-text {{text}}
+  step-text.step-text(v-bind:text="config.text" v-bind:type="config.type")
