@@ -1,3 +1,6 @@
 .step-content
-  img.step-image(v-bind:src="imagePath")
-  step-text.step-text(v-bind:text="config.text" v-bind:type="config.type")
+  .step-image
+    img(v-bind:src="imagePath")
+  .step-text-container
+    step-text.step-text(v-bind:config="config" v-bind:answer="answer")
+    .step-valid(v-if="config.type > 0" v-on:click="validAnswer()") OK

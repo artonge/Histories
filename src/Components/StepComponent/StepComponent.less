@@ -1,32 +1,38 @@
 .step-content {
-  display: flex;
   width: 100%;
   flex-grow: 1;
-  justify-content: center;
+  background: lighten(grey, 30%);
 
   .step-image {
-    max-width: 100%;
-    max-height: 100%;
+    height: calc(~'100% - 75px');
+    text-align: center;
+
+    img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+    }
   }
 
-  .step-text {
-    position: fixed;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    border: 2px solid black;
-    padding: 10px;
-    box-sizing: content-box;
+  .step-text-container {
+    height: 75px;
     display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    background: grey;
-    color: yellow;
-    font-weight: bold;
-    font-size: 17px;
-    letter-spacing: 1px;
-    text-shadow: 2px 0 0 #000, -2px 0 0 #000, 0 2px 0 #000, 0 -2px 0 #000, 1px 1px #000, -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000;
+    flex-direction: row;
+
+    .step-valid {
+      background: green;
+      color: white;
+      font-weight: bold;
+      cursor: pointer;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      padding: 0 10px;
+
+      &:hover {
+        background-color: lighten(green, 10%);
+      }
+    }
   }
 }

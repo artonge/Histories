@@ -6,21 +6,22 @@ import TextChooseComponent from '../TextChooseComponent/TextChooseComponent'
 import TextMistakeComponent from '../TextMistakeComponent/TextMistakeComponent'
 import TextAnachroComponent from '../TextAnachroComponent/TextAnachroComponent'
 
+import './StepTextComponent.less'
 
 function render(createElement: any) {
   var texts: [String]
 
-  switch (this.type) {
+  switch (this.config.type) {
     case StepType.Choice:
-      texts = this.text.split('<cut>')
+      texts = this.config.text.split('<cut>')
       break
     case StepType.Anachro:
-      texts = this.text.split('<cut>')
+      texts = this.config.text.split('<cut>')
       break
     case StepType.Mistake:
-      texts = this.text.split('<cut>')
+      texts = this.config.text.split('<cut>')
       break
-    default: texts = [this.text]
+    default: texts = [this.config.text]
   }
 
 
@@ -28,19 +29,19 @@ function render(createElement: any) {
     createElement('span', texts[0]),
   ]
 
-  switch (this.type) {
+  switch (this.config.type) {
     case StepType.Choice:
-      elements.push(createElement(TextChooseComponent, "Hello !"))
+      elements.push(createElement(TextChooseComponent, { props: { options: this.config.options } }))
       break
     case StepType.Anachro:
-      elements.push(createElement(TextAnachroComponent, "Hello !"))
+      elements.push(createElement(TextAnachroComponent, { props: { options: this.config.options } }))
       break
     case StepType.Mistake:
-      elements.push(createElement(TextMistakeComponent, "Hello !"))
+      elements.push(createElement(TextMistakeComponent, { props: { options: this.config.options } }))
       break
   }
 
-  if (this.type > 0) elements.push(createElement('span', texts[1]))
+  if (texts.length > 1) elements.push(createElement('span', texts[1]))
 
   return createElement('div', elements)
 }
@@ -51,8 +52,6 @@ export default Vue.component('step-text',  {
   staticRenderFns: render,
 
   props: {
-    text: String,
-    type: Number,
-    options: Object
+    config: Object
   }
 })

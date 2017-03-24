@@ -1,0 +1,53 @@
+.text-choose {
+  margin: 0px 5px;
+  border: 2px solid yellow;
+  border-radius: 5px;
+  position: relative;
+  height: 15px;
+  box-sizing: content-box;
+
+  &.select-mode {
+    .selected-option { opacity: 0; }
+
+    .options-container {
+      pointer-events: all;
+      opacity: 1;
+    }
+  }
+
+  .selected-option {
+    cursor: pointer;
+    line-height: 25px;
+  }
+
+  .options-container {
+    background: lightgray;
+    opacity: 0;
+    pointer-events: none;
+    border: 2px solid yellow;
+    border-radius: 5px;
+    position: relative;
+    top: -60px;
+    left: 0;
+
+    .option {
+      padding: 1px 8px;
+      cursor: pointer;
+      position: relative;
+      border-top: 1px solid yellow;
+      line-height: 25px;
+
+      &:first-child {
+        border: none;
+      }
+
+      &:hover {
+        background: darkgray;
+      }
+
+      &.default {
+        color: red;
+      }
+    }
+  }
+}

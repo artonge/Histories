@@ -6,7 +6,7 @@
 			"image": "1-1.png",
 			"text": "Uther Pendragon, kind of Britain falls in <cut> with Ygraine of Cornouailles.",
 			"type": 1,
-			"choices": [
+			"options": [
 				"love",
 				"on the ground"
 			],
