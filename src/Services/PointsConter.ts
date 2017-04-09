@@ -1,10 +1,11 @@
-export default class PointsFactory {
+// TODO - save in localStorage
+class PointsFactory {
 
   private pointsCount: number
 
-  constructor(userID: string) {
-    this.pointsCount = 0
-  }
+  // constructor(userID: string) {
+  //   this.pointsCount = 0
+  // }
 
   getPoints() {
     return this.pointsCount
@@ -18,3 +19,5 @@ export default class PointsFactory {
     this.pointsCount -= points
   }
 }
+
+export default new PointsFactory()

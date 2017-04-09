@@ -9,7 +9,8 @@ import * as Vue from 'vue'
 import StepType from '../../Models/StepType'
 import StepComponent from '../../Components/StepComponent/StepComponent'
 import StoryFactory from '../../Services/StoryFactory/StoryFactory'
-import { AppLogger, PointsConter } from '../../App/main'
+import AppLogger from '../../Services/AppLogger'
+import PointsConter from '../../Services/PointsConter'
 
 import './StoryView.less'
 
@@ -40,7 +41,6 @@ export default Vue.extend({
 
 		// Listen for answer change in step
 		onAnswerUpdate: function(answerIndex: number) {
-			console.log('Story')
 			this.stepAnswerIndex = answerIndex
 		},
 

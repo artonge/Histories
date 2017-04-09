@@ -1,6 +1,8 @@
 import Step from '../../Models/Step'
 import Story from '../../Models/Story'
 
+import AppLogger from '../../Services/AppLogger'
+
 const list: [Story] = [
   require('./arthur.json'),
 ]
@@ -10,7 +12,7 @@ class StoryFactory {
   public all: [Story]
 
   constructor(list: [Story]) {
-    console.info('Create StoryFactory')
+    AppLogger.info('Create StoryFactory')
     this.all = list
   }
 
