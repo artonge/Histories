@@ -12,13 +12,11 @@ import router from './router'
 
 // Create AppLogger
 import LogFactory from '../Services/LogFactory'
-debugger
 console.warn(LogFactory)
 export const AppLogger = new LogFactory(true)
 
 // Create points counter
 import PointsFactory from '../Services/PointsFactory'
-debugger
 console.warn(PointsFactory)
 export const PointsConter = new PointsFactory('user-id')
 

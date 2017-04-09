@@ -17,10 +17,16 @@ export default Vue.component('story-step', {
   },
 
   props: {
-    config: Object
+    config: Object,
   },
 
   computed: {
+    // dynamically set the images path
     imagePath: function() { return `/stories/arthur/${this.config.image}`}
-  }
+  },
+
+  methods: {
+    // Listen for answer change in text
+    onAnswerUpdate: function(answerIndex: number) { this.$emit('answer-update', answerIndex) },
+  },
 })

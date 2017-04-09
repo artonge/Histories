@@ -7,7 +7,7 @@ export default Vue.component('text-choose',  {
   template: require('./TextChooseComponent.pug')(),
 
   props: {
-    options: Array
+    options: Array,
   },
 
   data: () => {
@@ -18,13 +18,16 @@ export default Vue.component('text-choose',  {
   },
 
   methods: {
-    enterSelectedMode: function(e: Event) {
+    // Display the options
+    enterSelectMode: function(e: Event) {
       this.selectMode = true;
     },
 
-    selectOption: function(option: String, e: Event) {
+    // Called when an option is selected during selectMode
+    selectOption: function(index: number, e: Event) {
       this.selectMode = false
-      this.selectedOption = option
+      this.selectedOption = this.options[index]
+      this.$emit('answer-update', index) // Emit answer change to step component
       e.stopPropagation()
     }
   }

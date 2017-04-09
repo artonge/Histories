@@ -2,6 +2,7 @@
   #steps-container(@keyup.native.enter='nextStep')
     story-step(
       v-for="(step, index) of story.steps" v-bind:key="story.id"
-      v-show="index == currentStep"
+      v-show="index == currentStepIndex"
       v-bind:config='step'
+      v-on:answer-update='onAnswerUpdate'
     )

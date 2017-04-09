@@ -1,11 +1,11 @@
 span.text-choose(v-bind:class="{'select-mode': selectMode}")
   .option.selected-option(
-    v-on:click="enterSelectedMode($event)"
+    v-on:click="enterSelectMode($event)"
     v-if="!selectMode"
   ) {{selectedOption || "......"}}
   
   .options-container
     .option(
-      v-for='option in options'
-      v-on:click="selectOption(option, $event)"
+      v-for='(option, index) in options'
+      v-on:click="selectOption(index, $event)"
     ) {{option}}

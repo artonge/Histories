@@ -2,5 +2,5 @@
   .step-image
     img(v-bind:src="imagePath")
   .step-text-container
-    step-text.step-text(v-bind:config="config" v-bind:answer="answer")
+    step-text.step-text(v-bind:config="config" v-on:answer-update="onAnswerUpdate")
     .step-valid(v-if="config.type > 0" v-on:click="validAnswer()") OK
