@@ -54,7 +54,7 @@ export default Vue.extend({
 			// Check if answer is correct
 			const currentStep = this.story.steps[this.currentStepIndex]
 			if (currentStep.type != StepType.None) {
-				if (this.stepAnswerIndex != currentStep.answer) {
+				if (this.stepAnswerIndex == currentStep.answer) {
 					// If the answer is correct, add point to the total
 					AppLogger.info("Add 10 points")
 					PointsConter.add(10)
