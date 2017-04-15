@@ -12,8 +12,10 @@ html(lang="en" ng-app)
 			
 			// HEADER
 			header.header.header-1
-				router-link(to="/home") Histories
-				router-link(to="/stories") Stories
+				#header-links
+					router-link.header-link(to="/home") Histories
+					router-link.header-link(to="/stories") Stories
+				#points-counteur {{counter.pointsCount}} Points
 
 			// APP CONTENT
 			transition(name="fade")

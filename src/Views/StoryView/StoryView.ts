@@ -59,13 +59,11 @@ export default Vue.extend({
 			if (currentStep.type != StepType.None) {
 				if (this.answersList[this.currentStepIndex] == currentStep.answer) {
 					// If the answer is correct, add point to the total
-					AppLogger.info("Add 10 points")
 					PointsConter.add(10)
 					this.stepAnswer = null
 				} else {
 					// If not, remove points, correct the user then return
-					AppLogger.info("Remove 5 points")
-					PointsConter.remove(10)
+					PointsConter.remove(5)
 					// TODO - Correct user
 					return
 				}

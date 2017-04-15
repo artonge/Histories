@@ -1,22 +1,27 @@
-// TODO - save in localStorage
+import AppLogger from './AppLogger'
+
+
+// TODO - save in localStorage ?
 class PointsFactory {
 
-  private pointsCount: number
+  pointsCount: number
 
-  // constructor(userID: string) {
-  //   this.pointsCount = 0
-  // }
+  constructor() {
+    this.pointsCount = 0
+  }
 
   getPoints() {
     return this.pointsCount
   }
 
-  add(points: number) {
-    this.pointsCount += points
+  add(amount: number) {
+    AppLogger.info(`Add ${amount} points`)
+    this.pointsCount += amount
   }
 
-  remove(points: number) {
-    this.pointsCount -= points
+  remove(amount: number) {
+    AppLogger.info(`Remove ${amount} points`)
+    this.pointsCount -= amount
   }
 }
 
