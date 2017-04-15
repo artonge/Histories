@@ -5,6 +5,7 @@ import AppLogger from '../../Services/AppLogger'
 
 const list: [Story] = [
   require('./arthur.json'),
+  require('./karen.json'),
 ]
 
 class StoryFactory {

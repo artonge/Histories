@@ -1,7 +1,6 @@
 .step-content {
   width: 100%;
   flex-grow: 1;
-  background: lighten(grey, 30%);
 
   .step-image {
     height: calc(~'100% - 75px');
@@ -15,24 +14,7 @@
     }
   }
 
-  .step-text-container {
+  .step-text {
     height: 75px;
-    display: flex;
-    flex-direction: row;
-
-    .step-valid {
-      background: green;
-      color: white;
-      font-weight: bold;
-      cursor: pointer;
-      height: 100%;
-      display: flex;
-      align-items: center;
-      padding: 0 10px;
-
-      &:hover {
-        background-color: lighten(green, 10%);
-      }
-    }
   }
 }

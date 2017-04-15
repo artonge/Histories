@@ -1,8 +1,7 @@
-#stories-view
-  .content Hello {{message}}
-
-  #stories
-    router-link.nav-link.story(
-      v-for="story of stories" v-bind:key="story.id"
-      v-bind:to="{ name: 'story', params: { storyID: story.ID }}"
-    ) {{story.name}}
+#view-content
+  .header Choose the story you want to read :
+  ol#story-list
+    li.story(v-for="story of stories" v-bind:key="story.id")
+      router-link.nav-link(
+        v-bind:to="{ name: 'story', params: { storyID: story.ID }}"
+      ) {{story.name}}
