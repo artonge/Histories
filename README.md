@@ -6,12 +6,13 @@
 - [X] Update style of the stories view
 - [ ] Add more stories
 - [ ] Add more option to story display
-  + [ ] Add points count
+  + [X] Add points count
   + [ ] Find the correct traduction to a sentence
-  + [ ] Add find orthographique mistakes
-  + [ ] Complete the sentence by chossing between propositions
+  + [X] Add find orthographique mistakes
+  + [X] Complete the sentence by chossing between propositions
   + [ ] Add step in url
-  + [ ] Save step in localstorage
+  + [?] Save step in localstorage
+  + [ ] Add begin and end screens
 
 # Install
 - Install [node](https://nodejs.org/en/download) and [yarn](https://yarnpkg.com/lang/en/docs/install)
