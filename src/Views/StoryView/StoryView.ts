@@ -33,7 +33,10 @@ export default Vue.extend({
 			currentStepIndex: 0,
 
 			// Step's answer reveiver when needed
-			stepAnswerIndex: <string> null,
+			// answers can have multiple value type
+			// Choice  --> index of an element in an array
+			// Mistake --> the submitted correction from the user
+			answersList: {},
 		}
 	},
 
@@ -41,7 +44,7 @@ export default Vue.extend({
 
 		// Listen for answer change in step
 		onAnswerUpdate: function(answerIndex: number) {
-			this.stepAnswerIndex = answerIndex
+			this.answersList[this.currentStepIndex] = answerIndex
 		},
 
 
@@ -54,7 +57,7 @@ export default Vue.extend({
 			// Check if answer is correct
 			const currentStep = this.story.steps[this.currentStepIndex]
 			if (currentStep.type != StepType.None) {
-				if (this.stepAnswerIndex == currentStep.answer) {
+				if (this.answersList[this.currentStepIndex] == currentStep.answer) {
 					// If the answer is correct, add point to the total
 					AppLogger.info("Add 10 points")
 					PointsConter.add(10)

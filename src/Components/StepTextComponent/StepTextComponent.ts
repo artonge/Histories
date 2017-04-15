@@ -19,9 +19,12 @@ function render(createElement: any) {
   //  ==> this is usefull for the following code
   switch (this.config.type) {
     case StepType.Choice:
+      texts = this.config.text.split('<choice>')
+      break
     case StepType.Anachro:
+      break
     case StepType.Mistake:
-      texts = this.config.text.split('<cut>')
+      texts = this.config.text.split('<mistake>')
       break
     default: texts = [this.config.text]
   }
@@ -38,9 +41,10 @@ function render(createElement: any) {
   const elementConfig = {
     props: {
       options: this.config.options,
+      mistake: this.config.mistake,
     },
     on: {
-      'answer-update': (answerIndex: number)=> this.$emit('answer-update', answerIndex)
+      'answer-update': (answerValue: number)=> this.$emit('answer-update', answerValue)
     },
   }
 
