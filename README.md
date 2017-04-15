@@ -7,13 +7,13 @@
 - [ ] Add more stories
 - [ ] Add more option to story display
   + [X] Add points count
-  + [ ] Find the correct traduction to a sentence
+  + [ ] ?? Find the correct traduction to a sentence
   + [X] Add find orthographique mistakes
   + [X] Complete the sentence by chossing between propositions
   + [ ] Add step in url
-  + [?] Save step in localstorage
+  + [ ] ?? Save step in localstorage
   + [ ] Add begin and end screens
-
+us
 # Install
 - Install [node](https://nodejs.org/en/download) and [yarn](https://yarnpkg.com/lang/en/docs/install)
 - `git clone git@github.com:artonge/Histories.git`
