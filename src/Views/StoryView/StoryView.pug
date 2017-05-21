@@ -6,3 +6,5 @@
       v-bind:config='step'
       v-on:answer-update='onAnswerUpdate'
     )
+
+    #end-of-story.step-content(v-show="currentStepIndex == story.steps.length") THE END !
