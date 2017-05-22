@@ -19,6 +19,7 @@
 			"image": "1-3.png",
 			"text": "So Uther ask his good friend Merlin to help him. Merlin accepts, but only if the child is <mistake> to him.",
 			"type": 2,
+			"help": "Here, it's an irregular verb",
 			"mistake": "gived",
 			"answer": "given"
 		}, {
@@ -29,6 +30,7 @@
 			"image": "1-5.png",
 			"text": "<choice> months later, Merlin receives the baby.",
 			"type": 1,
+			"help": "How many months before giving birth ?",
 			"answer": 2,
 			"options": [
 				"Seven",
@@ -41,6 +43,7 @@
 			"text": "When Uther dies, <choice> is no heir to succeede him. To prevent conflic between Britain's lords, Merlin comes with an idea.",
 			"type": 1,
 			"answer": 2,
+			"help": "The right answer is a possessive adjective corresponding to the third person plural",
 			"options": [
 				"their",
 				"they're",
@@ -54,6 +57,7 @@
 			"image": "2-3.png",
 			"text": "All the <mistake> of Britain run to take their chance, but none of them succeed.",
 			"type": 2,
+			"help": "Just one letter less...",
 			"mistake": "peoples",
 			"answer": "people"
 		}, {
@@ -74,6 +78,7 @@
 			"image": "3-1-2.png",
 			"text": "To help him in his task, the lady of the lac offers him a migical <choice>, Excalibur !",
 			"type": 1,
+			"help": "It is a sharp object. It does not allow you to send a message ...",
 			"answer": 0,
 			"options": [
 				"sword",
@@ -117,12 +122,14 @@
 			"image": "4-4-2.png",
 			"text": "And Arthur finaly <mistake> him.",
 			"type": 2,
+			"help": "Just one letter less...",
 			"mistake": "kill",
 			"answer": "kills"
 		}, {
 			"image": "4-5.png",
 			"text": "But deadly <mistake>, Arthur is taken by his sister to Avalon, the druid's sacred island.",
 			"type": 2,
+			"help": "Just one letter more...",
 			"mistake": "wonded",
 			"answer": "wounded"
 		}

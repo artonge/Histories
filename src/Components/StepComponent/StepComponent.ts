@@ -18,6 +18,7 @@ export default Vue.component('story-step', {
 
   props: {
     config: Object,
+    needHelp: Boolean,
   },
 
   computed: {

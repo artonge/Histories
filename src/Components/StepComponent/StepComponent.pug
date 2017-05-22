@@ -1,4 +1,5 @@
 .step-content
   .step-image
     img(v-bind:src="imagePath")
+    .help(v-show="needHelp") {{config.help}}
   step-text.step-text(v-bind:config="config" v-on:answer-update="onAnswerUpdate")

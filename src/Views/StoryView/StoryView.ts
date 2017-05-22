@@ -37,6 +37,8 @@ export default Vue.extend({
 			// Choice  --> index of an element in an array
 			// Mistake --> the submitted correction from the user
 			answersList: {},
+			
+			needHelp: false
 		}
 	},
 
@@ -61,9 +63,11 @@ export default Vue.extend({
 					// If the answer is correct, add point to the total
 					PointsConter.add(10)
 					this.stepAnswer = null
+					this.needHelp = false
 				} else {
 					// If not, remove points, correct the user then return
 					PointsConter.remove(5)
+					this.needHelp = true
 					// TODO - Correct user
 					return
 				}
