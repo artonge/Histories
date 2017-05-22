@@ -1,0 +1,36 @@
+#view-content
+  .header Story Creation !
+
+  #story-json(v-show='showJSON')
+    | JSON result :
+    pre {{story}}
+    button#change-story(v-on:click="changeStory(story)") Change
+
+  #story-creation-container(v-show='!showJSON')
+    input#story-id(v-model="story.ID" placeholder="ID of thestory")
+    br
+    input#story-name(v-model="story.name" placeholder="Name of the story")
+    button#step-addtion(v-on:click="addAStep(story)") Add a step
+    
+    #steps-creation-container
+      .step-container(v-for="step in story.steps")
+        input.step-creation-image(v-model="step.image" placeholder="Image to display")
+        br
+        input.step-creation-text(v-model="step.text" placeholder="Text to display")
+        br
+        select.step-creation-type(v-model="step.type" placeholder="Type of the step")
+          option(value="0") None
+          option(value="1") Step
+          option(value="2") Mistake
+        br
+        .step-options-container(v-show='step.type != "0"')
+          button#option-addtion(v-on:click="addOption(step)") Add an option
+          .step-container(v-for="(option, index) in step.options")
+            input.step-creation-options(v-model="step.options[index]" placeholder="Label of the option")
+            button#option-deletion(v-on:click="removeOption(step, option)") Delete
+        br
+        input.step-creation-answer(v-model="step.answer" placeholder="Index of the correct answer")
+        br
+        button.step-deletion(v-on:click="removeAStep(story, step)") Delete
+          
+    button#creation-validation(v-on:click="validateStory(story)") Valider

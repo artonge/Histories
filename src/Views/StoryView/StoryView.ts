@@ -79,8 +79,8 @@ export default Vue.extend({
 				AppLogger.info("Next step")
 				this.currentStepIndex++
 			} else {
-				// TODO - Else show the end of story screen
 				AppLogger.info("End of story")
+				this.currentStepIndex++
 			}
 		},
 
