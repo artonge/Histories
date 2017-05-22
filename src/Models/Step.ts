@@ -5,7 +5,7 @@ interface Step {
   text     : String
   type     : StepType
   help     : string
-  choices? : [string]
+  options? : [string]
   answer?  : number
 }
 
