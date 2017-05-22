@@ -43,7 +43,7 @@
 			"text": "When Uther dies, <choice> is no heir to succeede him. To prevent conflic between Britain's lords, Merlin comes with an idea.",
 			"type": 1,
 			"answer": 2,
-			"help": "The right answer is a possessive adjective corresponding to the third person plural",
+			"help": "Their is a possessive adjective corresponding to the third person plural, it's not the right answer",
 			"options": [
 				"their",
 				"they're",
